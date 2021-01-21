@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <h1>Here is a list of all our {{language.name}} jokes!</h1>
+        <ul>
+            {% for joke in jokes %}
+                <li>
+                    <a href="{% url 'specific-joke' joke.id %}">
+                    {{joke.text}}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
